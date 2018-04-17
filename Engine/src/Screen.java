@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 public class Screen extends JPanel {
 	public Screen() {
-		super(new FlowLayout());
+		super();
 		
 		setBackground(Color.BLUE);
 		setSize(800,800);
@@ -16,7 +16,8 @@ public class Screen extends JPanel {
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.fillRect(100, 100, 100, 100);
+		g.setColor(Color.GREEN);
+		g.drawImage(Game.player.getImage(),Game.player.getX(),Game.player.getY(),null);
 	}
 
 }
